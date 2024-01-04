@@ -21,7 +21,7 @@ def main():
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
-        print(res)
+        print("{} {} {} = {}".format(a, sys.argv[2], b, res))
         sys.exit(0)
 
 
