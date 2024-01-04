@@ -7,7 +7,10 @@ def main():
     if argu == 0:
         print("0 arguments.")
     else:
-        print("{} arguments:".format(argu))
+        if argu == 1:
+            print("1 argument:")
+        else:
+            print("{} arguments:".format(argu))
         for i, argument in enumerate(sys.argv):
             if i == 0:
                 continue
