@@ -22,6 +22,7 @@ def main():
             print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
         print(res)
+        sys.exit(0)
 
 
 if __name__ == "__main__":
