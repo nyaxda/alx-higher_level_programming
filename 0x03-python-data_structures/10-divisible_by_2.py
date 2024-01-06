@@ -10,4 +10,3 @@ def divisible_by_2(my_list=[]):
             else:
                 cond.append(False)
         return cond
-
