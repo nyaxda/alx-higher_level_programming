@@ -9,13 +9,19 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *current;
 	char *str1, *str2, temp[120], temp2;
-	int i, len;
+	int i, len, flag;
 
 	if (*head == NULL)
 		return (1);
-	current = *head;
 	str1 = malloc(sizeof(char) * 120);
 	str2 = malloc(sizeof(char) * 120);
+	if (str1 == NULL || str2 == NULL)
+	{
+		free(str1);
+		free(str2);
+		return (0);
+	}
+	current = *head;
 	while (current != NULL)
 	{
 		snprintf(temp, sizeof(temp), "%d", current->n);
@@ -31,15 +37,10 @@ int is_palindrome(listint_t **head)
 		str2[len - i - 1] = temp2;
 	}
 	if (strcmp(str1, str2) == 0)
-	{
-		free(str1);
-		free(str2);
-		return (1);
-	}
+		flag = 1;
 	else
-	{
-		free(str1);
-		free(str2);
-		return (0);
-	}
+		flag = 0;
+	free(str1);
+	free(str2);
+	return (flag);
 }
