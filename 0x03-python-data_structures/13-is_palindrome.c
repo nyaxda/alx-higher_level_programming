@@ -8,19 +8,18 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	char *str1, *str2, temp[120], temp2;
-	int i, j, len, flag;
+	char *str1, temp[120];
+	int i, len, flag;
 
 	if (*head == NULL)
 		return (1);
 	str1 = malloc(sizeof(char) * 120);
-	str2 = malloc(sizeof(char) * 120);
-	if (str1 == NULL || str2 == NULL)
+	if (str1 == NULL)
 	{
 		free(str1);
-		free(str2);
 		return (0);
 	}
+	str1[0] = '\0';
 	current = *head;
 	while (current != NULL)
 	{
@@ -28,19 +27,17 @@ int is_palindrome(listint_t **head)
 		strcat(str1, temp);
 		current = current -> next;
 	}
-	strcpy(str2, str1);
-	len = strlen(str2);
-	for (i = 0, j = len - 1; i <= j; i++, j--)
-	{ 
-        temp2 = str2[i]; 
-        str2[i] = str2[j]; 
-        str2[j] = temp2; 
-    } 
-	if (strcmp(str1, str2) == 0)
-		flag = 1;
-	else
-		flag = 0;
-	free(str1);
-	free(str2);
-	return (flag);
+	len = strlen(str1);
+	flag = 1;
+    for (i = 0; i < len / 2; i++)
+    {
+        if (str1[i] != str1[len - i - 1])
+        {
+            flag = 0;
+            break;
+        }
+    }
+    free(str1);
+    return (flag);
 }
+
