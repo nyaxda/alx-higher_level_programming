@@ -7,37 +7,39 @@
 */
 int is_palindrome(listint_t **head)
 {
-	listint_t *current;
-	char *str1, temp[120];
-	int i, len, flag;
+	listint_t *fast, slow, pre, curr, next, beg, end;
 
-	if (*head == NULL)
-		return (1);
-	str1 = malloc(sizeof(char) * 120);
-	if (str1 == NULL)
+	if (head == NULL || *head == NULL)
+		return(1)
+	fast = *head;
+	slow = *head;
+	/*moving slow to middle and fast to the end*/
+	while (fast != NULL)
 	{
-		free(str1);
-		return (0);
+		fast = fast->next->next;
+		slow = slow->next;
 	}
-	str1[0] = '\0';
-	current = *head;
-	while (current != NULL)
+	pre = NULL;
+	curr = slow;
+	next = NULL;
+	/*reversing the pointer from the middle to the end*/
+	while (curr != NULL)
 	{
-		snprintf(temp, sizeof(temp), "%d", current->n);
-		strcat(str1, temp);
-		current = current -> next;
+		next = curr->next;
+		curr->next = pre;
+		pre = curr;
+		curr = next;
 	}
-	len = strlen(str1);
-	flag = 1;
-    for (i = 0; i < len / 2; i++)
-    {
-        if (str1[i] != str1[len - i - 1])
-        {
-            flag = 0;
-            break;
-        }
-    }
-    free(str1);
-    return (flag);
+	/*beginning comparison*/
+	left = *head;
+	right = pre;
+
+	while (right != NULL)
+	{
+		if (left->n != right->n)
+			return(0);
+		left = left->next;
+		right = right->next;
+	}
+	return (0);
 }
-
