@@ -30,12 +30,12 @@ int is_palindrome(listint_t **head)
 	}
 	strcpy(str2, str1);
 	len = strlen(str2);
-	for (i = 0; i < len / 2; i++)
-	{
-		temp2 = str2[i];
-		str2[i] = str2[len - i - 1];
-		str2[len - i - 1] = temp2;
-	}
+	for (i = 0, j = len - 1; i <= j; i++, j--)
+	{ 
+        temp2 = str2[i]; 
+        str2[i] = str2[j]; 
+        str2[j] = temp2; 
+    } 
 	if (strcmp(str1, str2) == 0)
 		flag = 1;
 	else
