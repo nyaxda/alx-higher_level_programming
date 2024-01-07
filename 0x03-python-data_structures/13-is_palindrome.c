@@ -18,7 +18,8 @@ int is_palindrome(listint_t **head)
 	str2 = malloc(sizeof(char) * 120);
 	while (current != NULL)
 	{
-		strcat(str1, (char *)current -> n);
+		sprintf(temp, "%d", current->n);
+		strcat(str1, temp);
 		current = current -> next;
 	}
 	strcpy(str2, str1);
