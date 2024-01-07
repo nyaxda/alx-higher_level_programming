@@ -8,7 +8,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	char *str1, *str2, temp[120];
+	char *str1, *str2, temp[120], temp2;
 	int i, len;
 
 	if (*head == NULL)
@@ -26,9 +26,9 @@ int is_palindrome(listint_t **head)
 	len = strlen(str2);
 	for (i = 0; i < len / 2; i++)
 	{
-		temp = str2[i];
+		temp2 = str2[i];
 		str2[i] = str2[len - i - 1];
-		str2[len - i - 1] = temp;
+		str2[len - i - 1] = temp2;
 	}
 	if (strcmp(str1, str2) == 0)
 	{
