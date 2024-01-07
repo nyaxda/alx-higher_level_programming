@@ -8,7 +8,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	char *str1, *str2, temp;
+	char *str1, *str2, temp[120];
 	int i, len;
 
 	if (*head == NULL)
@@ -18,7 +18,7 @@ int is_palindrome(listint_t **head)
 	str2 = malloc(sizeof(char) * 120);
 	while (current != NULL)
 	{
-		sprintf(temp, "%d", current->n);
+		snprintf(temp, sizeof(temp), "%d", current->n);
 		strcat(str1, temp);
 		current = current -> next;
 	}
