@@ -9,4 +9,4 @@ def search_replace(my_list, search, replace):
     elif search is None or replace is None:
         return my_list
     else:
-       return list(map(lambda x: replacer(search, replace, x), my_list))
+        return list(map(lambda x: replacer(search, replace, x), my_list))
