@@ -4,4 +4,4 @@ def square_matrix_simple(matrix=[]):
         return None
     else:
         matrix2 = [[x ** 2 for x in row] for row in matrix]
-        return matrix2
+    return matrix2
