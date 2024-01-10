@@ -3,8 +3,8 @@ def best_score(a_dictionary):
     if a_dictionary is None:
         return None
     else:
-        maxim = None
+        maxim = next(iter(a_dictionary))
         for i in a_dictionary:
-            if maxim is None or i > maxim:
+            if  i > maxim:
                 maxim = i
         return maxim
