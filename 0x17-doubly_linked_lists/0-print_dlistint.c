@@ -7,7 +7,7 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-    struct dlistint_s *current = h;
+    const struct dlistint_s *current = h;
     int count = 0;
 
     while (current != NULL)
