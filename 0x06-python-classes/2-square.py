@@ -9,7 +9,7 @@ class Square:
         Args:
         size (_type_): _description_
         """
-        if not isintance(size, int):
+        if type(size) is not int:
             raise TypeError("size must be an integer")
         else:
             if size < 0:
