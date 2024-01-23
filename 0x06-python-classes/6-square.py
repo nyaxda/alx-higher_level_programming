@@ -29,18 +29,24 @@ class Square:
             else:
                 self.__size = value
 
-     def my_print(self):
-        if self.__size == 0:
-            print("")
-        else:
-            for i in range (self.__position[1]):
-                print("")
-            for j in range(self.__size):
-                for e in range(self.__position[0]):
-                    print(" ", end="")
-                for j in range(self.__size):
-                    print("#", end="")
-                print("")
+     def pos_print(self):
+        """returns the position in spaces"""
+        pos = ""
+        if self.size == 0:
+            return "\n"
+        for w in range(self.position[1]):
+            pos += "\n"
+        for w in range(self.size):
+            for i in range(self.position[0]):
+                pos += " "
+            for j in range(self.size):
+                pos += "#"
+            pos += "\n"
+        return pos
+
+    def my_print(self):
+        """print the square in position"""
+        print(self.pos_print(), end='')
                 
     @property
     def position(self):
