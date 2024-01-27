@@ -1,0 +1,104 @@
+Prints a text with 2 new lines after each of these characters: ., ? and :
+
+Test import module:
+    >>> indent = __import__('5-text_indentation').text_indentation
+
+Case 1: Normal Case:
+    >>> indent("I am. I was? I will:")
+    I am.
+
+    I was?
+
+    I will:
+
+Case 2: No spaces after the characters:
+    >>> indent("I am.I was?I will:")
+    I am:
+
+    I was?
+
+    I will:
+
+Case 3: text is not a string:
+    >>> indent(5)
+    Traceback (most recent call last):
+            ...
+    TypeError: text must be a string
+
+    >>> indent(True)
+    Traceback (most recent call last):
+            ...
+    TypeError: text must be a string
+
+Case 4: string with leading and or or trailing whitespaces:
+    >>> indent(" I am Daniel, Am I Daniel? We: will   ")
+    I am Daniel, Am I Daniel?
+
+    We:
+
+    will
+
+Case 5: The characters only in the string:
+    >>> indent(".,?:")
+
+Case 6: Empty string:
+    >>> indent("")
+
+Case 7: String with only spaces:
+    >>> indent("        ")
+
+Case 8: String with no special characters:
+    >>> indent("I am I was I will")
+    I am I was I will
+
+Case 9: Special characters in the middle of words:
+    >>> indent("I am.I was?I will:in.the:middle?of.words")
+    I am.
+
+    I was?
+
+    I will:
+    
+    in.
+
+    the:
+    
+    middle?
+
+    of.
+    
+    words
+
+Case 10: Multiple consecutive special characters:
+    >>> indent("Hello..World")
+    Hello.
+
+    .
+
+    World
+
+Case 11: Special characters within words:
+    >>> indent("Hello.Wor:ld?")
+    Hello.
+
+    Wor:
+
+    ld?
+
+Case 12: Whitespace before special characters:
+    >>> indent("Hello . World : Yes ?")
+    Hello .
+
+    World :
+
+    Yes ?
+
+Case 13: Mixed case:
+    >>> indent(" Hello..Wor:ld? ")
+    Hello.
+
+    .
+
+    Wor:
+
+    ld?
