@@ -23,14 +23,20 @@ One argument is a string
     >>> add_integer(2, "q")
     TypeError: b must be an integer
     >>> add_integer("a", 2)
+    Traceback (most recent call last):
+            ...
     TypeError: a must be an integer
 
 Both arguments are strings
     >>> add_integer("a", "c")
+    Traceback (most recent call last):
+            ...
     TypeError: a must be an integer
 
 Variable b is none, a a string
     >>> add_integer("a", None)
+    Traceback (most recent call last):
+            ...
     TypeError: a must be an integer
 
 Variable b is none, a an int
@@ -39,6 +45,8 @@ Variable b is none, a an int
 
 Both variables are none
     >>> add_integer(None, None)
+    Traceback (most recent call last):
+            ...
     TypeError: a must be an integer
 
 One variable is a float
