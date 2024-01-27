@@ -1,10 +1,10 @@
 Prints a text with 2 new lines after each of these characters: ., ? and :
 
 Test import module:
-    >>> from __import__('5-text_indentation') import text_indentation as indent
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Case 1: Normal Case:
-    >>> indent("I am. I was? I will:")
+    >>> text_indentation("I am. I was? I will:")
     I am.
     <BLANKLINE>
     I was?
@@ -12,7 +12,7 @@ Case 1: Normal Case:
     I will:
 
 Case 2: No spaces after the characters:
-    >>> indent("I am.I was?I will:")
+    >>> text_indentation("I am.I was?I will:")
     I am:
     <BLANKLINE>
     I was?
@@ -20,18 +20,18 @@ Case 2: No spaces after the characters:
     I will:
 
 Case 3: text is not a string:
-    >>> indent(5)
+    >>> text_indentation(5)
     Traceback (most recent call last):
             ...
     TypeError: text must be a string
 
-    >>> indent(True)
+    >>> text_indentation(True)
     Traceback (most recent call last):
             ...
     TypeError: text must be a string
 
 Case 4: string with leading and or or trailing whitespaces:
-    >>> indent(" I am Daniel, Am I Daniel? We: will   ")
+    >>> text_indentation(" I am Daniel, Am I Daniel? We: will   ")
     I am Daniel, Am I Daniel?
     <BLANKLINE>
     We:
@@ -39,20 +39,20 @@ Case 4: string with leading and or or trailing whitespaces:
     will
 
 Case 5: The characters only in the string:
-    >>> indent(".,?:")
+    >>> text_indentation(".,?:")
 
 Case 6: Empty string:
-    >>> indent("")
+    >>> text_indentation("")
 
 Case 7: String with only spaces:
-    >>> indent("        ")
+    >>> text_indentation("        ")
 
 Case 8: String with no special characters:
-    >>> indent("I am I was I will")
+    >>> text_indentation("I am I was I will")
     I am I was I will
 
 Case 9: Special characters in the middle of words:
-    >>> indent("I am.I was?I will:in.the:middle?of.words")
+    >>> text_indentation("I am.I was?I will:in.the:middle?of.words")
     I am.
     <BLANKLINE>
     I was?
@@ -70,7 +70,7 @@ Case 9: Special characters in the middle of words:
     words
 
 Case 10: Multiple consecutive special characters:
-    >>> indent("Hello..World")
+    >>> text_indentation("Hello..World")
     Hello.
     <BLANKLINE>
     .
@@ -78,7 +78,7 @@ Case 10: Multiple consecutive special characters:
     World
 
 Case 11: Special characters within words:
-    >>> indent("Hello.Wor:ld?")
+    >>> text_indentation("Hello.Wor:ld?")
     Hello.
     <BLANKLINE>
     Wor:
@@ -86,7 +86,7 @@ Case 11: Special characters within words:
     ld?
 
 Case 12: Whitespace before special characters:
-    >>> indent("Hello . World : Yes ?")
+    >>> text_indentation("Hello . World : Yes ?")
     Hello .
     <BLANKLINE>
     World :
@@ -94,7 +94,7 @@ Case 12: Whitespace before special characters:
     Yes ?
 
 Case 13: Mixed case:
-    >>> indent(" Hello..Wor:ld? ")
+    >>> text_indentation(" Hello..Wor:ld? ")
     Hello.
     <BLANKLINE>
     .
