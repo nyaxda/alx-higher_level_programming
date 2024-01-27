@@ -27,7 +27,7 @@ Div is not a number:
     >>> matrix_divided([[1, 2], [3, 4]], "4")
     Traceback (most recent call last):
             ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: div must be a number
 
 Zero divisor:
     >>> matrix_divided([[1, 2], [3, 4]], 0)
