@@ -41,6 +41,12 @@ Variable b is none, a a string
 
 Variable b is none, a an int
     >>> add_integer(2, None)
+    Traceback (most recent call last):
+            ...
+    TypeError: b must be an integer
+
+Passing only a
+    >>> add_integer(2)
     100
 
 Both variables are none
