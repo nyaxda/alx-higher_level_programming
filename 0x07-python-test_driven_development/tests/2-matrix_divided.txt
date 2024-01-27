@@ -24,7 +24,7 @@ Matrix with elements which aren't int/float:
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Div is not a number:
-    >>> matrix_divided([[1, 2], [3, "4"]], "4")
+    >>> matrix_divided([[1, 2], [3, 4]], "4")
     Traceback (most recent call last):
             ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
