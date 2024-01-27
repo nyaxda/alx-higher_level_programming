@@ -13,4 +13,4 @@ def say_my_name(first_name, last_name=""):
         tlast = last_name.strip()
         print("My name is {} {}".format(tfirst, tlast))
     else:
-        print("My name is {}".format(tfirst))
+        print("My name is {} ".format(tfirst))
