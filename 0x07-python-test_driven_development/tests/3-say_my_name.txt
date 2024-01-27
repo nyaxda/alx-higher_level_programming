@@ -31,11 +31,11 @@ First name is an empty string:
 
 Last name is an empty string:
     >>> say_name("Daniel", "")
-    My name is Daniel
+    My name is Daniel 
 
 Last name is None:
     >>> say_name("Daniel")
-    My name is Daniel
+    My name is Daniel 
 
 Both first and last names are None:
     >>> say_name()
@@ -56,7 +56,7 @@ First name and or last name contain whitespace:
     TypeError: first_name must be a string
 
     >>> say_name(" Daniel ", "")
-    My name is Daniel
+    My name is Daniel 
 
     >>> say_name(" ", " ")
     Traceback (most recent call last):
