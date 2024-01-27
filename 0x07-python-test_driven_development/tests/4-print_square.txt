@@ -9,7 +9,7 @@ Normal case:
     ###
     ###
 
-    >>>square(5)
+    >>> square(5)
     #####
     #####
     #####
