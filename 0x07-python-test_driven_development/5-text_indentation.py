@@ -9,6 +9,6 @@ def text_indentation(text):
         if char in ".?:":
             final = (text[start:i + 1].strip())
             if final:
-                print(final)
+                print(final + "\n")
             start = i + 1
     print(text[start:].strip())
