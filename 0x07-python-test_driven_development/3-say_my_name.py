@@ -9,7 +9,7 @@ def say_my_name(first_name, last_name=""):
     tfirst = first_name.strip()
     if tfirst == "":
         raise ValueError("first_name must be a string")
-    if last_name is not None and last_name is not "":
+    if last_name is not None or last_name is not "":
         tlast = last_name.strip()
         print("My name is {} {}".format(tfirst, tlast))
     else:
