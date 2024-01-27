@@ -13,7 +13,7 @@ Case 1: Normal Case:
 
 Case 2: No spaces after the characters:
     >>> text_indentation("I am.I was?I will:")
-    I am:
+    I am.
     <BLANKLINE>
     I was?
     <BLANKLINE>
@@ -40,6 +40,13 @@ Case 4: string with leading and or or trailing whitespaces:
 
 Case 5: The characters only in the string:
     >>> text_indentation(".,?:")
+    .
+
+    ,
+
+    ?
+
+    :
 
 Case 6: Empty string:
     >>> text_indentation("")
