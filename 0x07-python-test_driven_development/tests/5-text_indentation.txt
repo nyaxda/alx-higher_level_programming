@@ -42,7 +42,7 @@ Case 5: The characters only in the string:
     >>> text_indentation(".,?:")
     .
     <BLANKLINE>
-    ,
+    ,?
     <BLANKLINE>
     ?
     <BLANKLINE>
