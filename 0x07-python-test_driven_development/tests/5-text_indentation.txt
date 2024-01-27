@@ -6,17 +6,17 @@ Test import module:
 Case 1: Normal Case:
     >>> indent("I am. I was? I will:")
     I am.
-
+    <BLANKLINE>
     I was?
-
+    <BLANKLINE>
     I will:
 
 Case 2: No spaces after the characters:
     >>> indent("I am.I was?I will:")
     I am:
-
+    <BLANKLINE>
     I was?
-
+    <BLANKLINE>
     I will:
 
 Case 3: text is not a string:
@@ -33,9 +33,9 @@ Case 3: text is not a string:
 Case 4: string with leading and or or trailing whitespaces:
     >>> indent(" I am Daniel, Am I Daniel? We: will   ")
     I am Daniel, Am I Daniel?
-
+    <BLANKLINE>
     We:
-
+    <BLANKLINE>
     will
 
 Case 5: The characters only in the string:
@@ -54,51 +54,51 @@ Case 8: String with no special characters:
 Case 9: Special characters in the middle of words:
     >>> indent("I am.I was?I will:in.the:middle?of.words")
     I am.
-
+    <BLANKLINE>
     I was?
-
+    <BLANKLINE>
     I will:
-    
+    <BLANKLINE>
     in.
-
+    <BLANKLINE>
     the:
-    
+    <BLANKLINE>
     middle?
-
+    <BLANKLINE>
     of.
-    
+    <BLANKLINE>
     words
 
 Case 10: Multiple consecutive special characters:
     >>> indent("Hello..World")
     Hello.
-
+    <BLANKLINE>
     .
-
+    <BLANKLINE>
     World
 
 Case 11: Special characters within words:
     >>> indent("Hello.Wor:ld?")
     Hello.
-
+    <BLANKLINE>
     Wor:
-
+    <BLANKLINE>
     ld?
 
 Case 12: Whitespace before special characters:
     >>> indent("Hello . World : Yes ?")
     Hello .
-
+    <BLANKLINE>
     World :
-
+    <BLANKLINE>
     Yes ?
 
 Case 13: Mixed case:
     >>> indent(" Hello..Wor:ld? ")
     Hello.
-
+    <BLANKLINE>
     .
-
+    <BLANKLINE>
     Wor:
-
+    <BLANKLINE>
     ld?
