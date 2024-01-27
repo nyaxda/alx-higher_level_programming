@@ -54,6 +54,7 @@ Both first and last names are empty strings:
     Traceback (most recent call last):
             ...
     TypeError: first_name must be a string
+
 First name and or last name contain whitespace:
     >>> say_name(" ", "Nyakundi")
     Traceback (most recent call last):
