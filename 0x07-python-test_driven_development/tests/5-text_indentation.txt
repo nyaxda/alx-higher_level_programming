@@ -44,8 +44,6 @@ Case 5: The characters only in the string:
     <BLANKLINE>
     ,?
     <BLANKLINE>
-    ?
-    <BLANKLINE>
     :
 
 Case 6: Empty string:
