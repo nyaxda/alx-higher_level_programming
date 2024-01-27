@@ -40,10 +40,10 @@ Case: size is a float and or or is less than 0:
     TypeError: size must be an integer
 
 Case: the size is blank:
-    >>>square()
+    >>> square()
     Traceback (most recent call last):
             ...
     TypeError: size must be an integer
 
 Case: the size is 0:
-    >>>square(0)
+    >>> square(0)
