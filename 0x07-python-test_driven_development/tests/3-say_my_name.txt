@@ -12,7 +12,7 @@ Normal case:
     My name is Daniel Nyakundi
 
 First name is not a string:
-    >>> say_name(Daniel, "Nyakundi")
+    >>> say_name(2, "Nyakundi")
     Traceback (most recent call last):
             ...
     TypeError: first_name must be a string
