@@ -5,7 +5,7 @@ Two strings provided, returns a string
 :return: string
 
 Test for importing
-    >>>say_name = __import__('3-say_my_name').say_my_name
+    >>> say_name = __import__('3-say_my_name').say_my_name
 
 Normal case:
     >>> say_name("Daniel", "Nyakundi")
