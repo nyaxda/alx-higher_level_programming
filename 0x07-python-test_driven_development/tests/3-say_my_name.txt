@@ -37,12 +37,6 @@ Last name is None:
     >>> say_name("Daniel")
     My name is Daniel
 
-Fist name is None:
-    >>> say_name(, "Nyakundi")
-    Traceback (most recent call last):
-            ...
-    TypeError: first_name must be a string
-
 Both first and last names are None:
     >>> say_name()
     Traceback (most recent call last):
