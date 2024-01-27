@@ -7,9 +7,9 @@ def text_indentation(text):
     start = 0
     for i, char in enumerate(text):
         if char in ".?:":
-            if i != len(text) - 1:
-                print(text[start:i + 1].strip() + "\n")
-            else:
                 print(text[start:i + 1].strip())
+            if i != len(text) - 1:
+                print("\n")
             start = i + 1
-    print(text[start:].strip())
+    if start < len(text):
+        print(text[start:].strip())
