@@ -10,6 +10,5 @@ def text_indentation(text):
             final = (text[start:i + 1].strip())
             if final:
                 print(final)
-                print()
             start = i + 1
     print(text[start:].strip())
