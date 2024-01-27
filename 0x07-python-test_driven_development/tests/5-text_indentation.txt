@@ -1,7 +1,7 @@
 Prints a text with 2 new lines after each of these characters: ., ? and :
 
 Test import module:
-    >>> indent = __import__('5-text_indentation').text_indentation
+    >>> from __import__('5-text_indentation') import text_indentation as indent
 
 Case 1: Normal Case:
     >>> indent("I am. I was? I will:")
