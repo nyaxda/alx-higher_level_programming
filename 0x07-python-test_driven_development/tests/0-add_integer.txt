@@ -21,7 +21,10 @@ Both negative numbers
 
 One argument is a string
     >>> add_integer(2, "q")
+    Traceback (most recent call last):
+            ...
     TypeError: b must be an integer
+
     >>> add_integer("a", 2)
     Traceback (most recent call last):
             ...
