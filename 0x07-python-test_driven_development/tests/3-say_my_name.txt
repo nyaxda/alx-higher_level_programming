@@ -60,13 +60,17 @@ First name and or last name contain whitespace:
     Traceback (most recent call last):
             ...
     TypeError: first_name must be a string
+
     >>> say_name(" Daniel ", "")
     My name is Daniel
+
     >>> say_name(" ", " ")
     Traceback (most recent call last):
             ...
     TypeError: first_name must be a string
+
     >> say_name(" Daniel ", " ")
     My name is Daniel
+
     >>> say_name(" Daniel ", " Nyakundi ")
     My name is Daniel Nyakundi
