@@ -8,6 +8,7 @@ def text_indentation(text):
     text = text.replace('.', '.\n\n')
     text = text.replace('?', '?\n\n')
     text = text.replace(':', ':\n\n')
-    text = text.replace('  ', '')
-    text = text.replace('\n ', '\n')
+    lines = text.split('\n')
+    lines = [line.strip() for line in lines]
+    text = '\n'.join(lines)
     print(text, end="")
