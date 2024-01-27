@@ -1,0 +1,49 @@
+Prints a square with the character #
+
+Test import:
+    >>> square = __import__('4-print_square').print_square
+
+Normal case:
+    >>> square(3)
+    ###
+    ###
+    ###
+
+    >>>square(5)
+    #####
+    #####
+    #####
+    #####
+    #####
+
+Case: size if not an integer:
+    >>> square("e")
+    Traceback (most recent call last):
+            ...
+    TypeError: size must be an integer
+
+Case: size is less than 0:
+    >>> square(-2)
+    Traceback (most recent call last):
+            ...
+    ValueError: size must be >= 0
+
+Case: size is a float and or or is less than 0:
+    >>> square(2.5)
+    Traceback (most recent call last):
+            ...
+    TypeError: size must be an integer
+
+    >>> square(-2.5)
+    Traceback (most recent call last):
+            ...
+    TypeError: size must be an integer
+
+Case: the size is blank:
+    >>>square()
+    Traceback (most recent call last):
+            ...
+    TypeError: size must be an integer
+
+Case: the size is 0:
+    >>>square(0)
