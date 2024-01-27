@@ -1,0 +1,71 @@
+Two strings provided, returns a string
+
+:param first_name: string
+:param last_name: string
+:return: string
+
+Test for importing
+    >>>say_name = __import__('3-say_my_name').say_my_name
+
+Normal case:
+    >>> say_name("Daniel", "Nyakundi")
+    My name is Daniel Nyakundi
+
+First name is not a string:
+    >>> say_name(Daniel, "Nyakundi")
+    Traceback (most recent call last):
+            ...
+    TypeError: first_name must be a string
+
+Last name is not a string:
+    >>> say_name("Daniel", Nyakundi)
+    Traceback (most recent call last):
+            ...
+    TypeError: last_name must be a string
+
+First name is an empty string:
+    >>> say_name("", "Nyakundi")
+    Traceback (most recent call last):
+            ...
+    TypeError: first_name must be a string
+
+Last name is an empty string:
+    >>> say_name("Daniel", "")
+    My name is Daniel
+
+Last name is None:
+    >>> say_name("Daniel")
+    My name is Daniel
+
+Fist name is None:
+    >>> say_name(, "Nyakundi")
+    Traceback (most recent call last):
+            ...
+    TypeError: first_name must be a string
+
+Both first and last names are None:
+    >>> say_name()
+    Traceback (most recent call last):
+            ...
+    TypeError: first_name must be a string
+
+Both first and last names are empty strings:
+    >>> say_name("", "")
+    Traceback (most recent call last):
+            ...
+    TypeError: first_name must be a string
+First name and/or last name contain whitespace:
+    >>> say_name(" ", "Nyakundi")
+    Traceback (most recent call last):
+            ...
+    TypeError: first_name must be a string
+    >>> say_name(" Daniel ", "")
+    My name is Daniel
+    >>> say_name(" ", " ")
+    Traceback (most recent call last):
+            ...
+    TypeError: first_name must be a string
+    >> say_name(" Daniel ", " ")
+    My name is Daniel
+    >>> say_name(" Daniel ", " Nyakundi ")
+    My name is Daniel Nyakundi

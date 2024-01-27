@@ -6,4 +6,11 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("first_name must be a string")
     if type(last_name) is not str:
         raise TypeError("last_name must be a string")
-    print("My name is {} {}".format(first_name, last_name))
+    tfirst = first_name.strip()
+    if tfirst == "":
+        raise ValueError("first_name must be a string")
+    if last_name is not None and last_name is not "":
+        tlast = last_name.strip()
+        print("My name is {} {}".format(tfirst, tlast))
+    else:
+        print("My name is {}".format(tfirst))
