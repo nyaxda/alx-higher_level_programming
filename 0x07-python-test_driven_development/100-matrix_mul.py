@@ -26,7 +26,7 @@ def matrix_mul(m_a, m_b):
                 raise TypeError(message1)
             else:
                 for num in row:
-                    if (isinstance(num, bool) or \
+                    if (isinstance(num, bool) or
                         not isinstance(num, (int, float))):
                         raise TypeError(message3)
         for row in m_b:
@@ -38,7 +38,7 @@ def matrix_mul(m_a, m_b):
                 raise TypeError(message2)
             else:
                 for num in row:
-                    if (isinstance(num, bool) or \
+                    if (isinstance(num, bool) or
                         not isinstance(num, (int, float))):
                         raise TypeError(message4)
     if len(m_a[0]) != len(m_b):
