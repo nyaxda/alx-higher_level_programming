@@ -11,7 +11,7 @@ Case 2: Matrices with unequal size:
     >>> mul([[1, 2], [3, 4]], [[1, 2], [3, 4], [5, 6]])
     Traceback (most recent call last):
             ...
-    TypeError: m_a and m_b can't be multiplied
+    ValueError: m_a and m_b can't be multiplied
 
 Case 3: Matrices with unequal row size:
     >>> mul([[1, 2], [3, 4, 5]], [[1, 2], [3, 4]])
