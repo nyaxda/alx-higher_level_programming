@@ -30,17 +30,17 @@ def matrix_mul(m_a, m_b):
                         not isinstance(num, (int, float))):
                         raise TypeError(message3)
         for row in m_b:
-                if not isinstance(row, list):
-                    raise TypeError("m_b must be a list of lists")
-                elif len(row) == 0:
-                    raise ValueError("m_b can't be empty")
-                elif len(row) != len(m_b[0]):
-                    raise TypeError(message2)
-                else:
-                    for num in row:
-                        if (isinstance(num, bool) or
-                            not isinstance(num, (int, float))):
-                            raise TypeError(message4)
+            if not isinstance(row, list):
+                raise TypeError("m_b must be a list of lists")
+            elif len(row) == 0:
+                raise ValueError("m_b can't be empty")
+            elif len(row) != len(m_b[0]):
+                raise TypeError(message2)
+            else:
+                for num in row:
+                    if (isinstance(num, bool) or
+                        not isinstance(num, (int, float))):
+                        raise TypeError(message4)
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     result = []
