@@ -30,7 +30,7 @@ Case 5: Matrices are not is not list(s):
             ...
     TypeError: m_a must be a list
 
-    >>> mul([[1, 2], [3, 4]], False)
+    >>> mul([[1, 2], [3, 4]], 2)
     Traceback (most recent call last):
             ...
     TypeError: m_b must be a list
