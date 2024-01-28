@@ -1,0 +1,100 @@
+Multiplies 2 matrices
+
+Testing import:
+    >>> mul = __import__('100-matrix_mul.py').matrix_mul
+
+Case 1: Normal Case:
+    >>> mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    [[7, 10], [15, 22]]
+
+Case 2: Matrices with unequal size:
+    >>> mul([[1, 2], [3, 4]], [[1, 2], [3, 4], [5, 6]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a and m_b can't be multiplied
+
+Case 3: Matrices with unequal row size:
+    >>> mul([[1, 2], [3, 4, 5]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+            ...
+    TypeError: each row of m_a must be of the same size
+
+    >>> mul([[1, 2], [3, 4]], [[1, 2], [3, 4, 5]])
+    Traceback (most recent call last):
+            ...
+    TypeError: each row of m_b must be of the same size
+
+Case 5: Matrices are not is not list(s):
+    >>> mul(True, [[1, 2], [3, 4, 5]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a must be a list
+
+    >>> mul([[1, 2], [3, 4, 5]], False)
+    Traceback (most recent call last):
+            ...
+    TypeError: m_b must be a list
+
+    >>> mul(True, False)
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a must be a list
+
+    >>> mul(1, [[1, 2], [3, 4, 5]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a must be a list
+
+Case 6: Matrices are not lists of lists:
+    >>> mul([1, [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a must be a list of lists
+
+    >>> mul([[1, 2], [3, 4]], [[1, 2], 3])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_b must be a list of lists
+
+    >>> mul([[1, 2], 3], [[1, 2], 3])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a must be a list of lists
+
+Case 7: one element of those list of lists is not an integer or a float
+    >>> mul([[1, "a"], [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a should contain only integers or floats
+
+    >>> mul([[1, 2], [3, 4]], [[1, 2], [3, False]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_b should contain only integers or floats
+
+    >>> mul([[1, "a"], [3, 4]], [[1, 2], [3, False]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a should contain only integers or floats
+
+Case 8: m_a or m_b is a list of lists, but one or more of the inner lists is empty.
+    >>> mul([[1, 2], []], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+            ...
+    ValueError: each row of m_a must be of the same size
+
+    >>> mul([[1, 2], [3, 4]], [[1, 2], []])
+    Traceback (most recent call last):
+            ...
+    ValueError: each row of m_b must be of the same size
+
+Case 9: m_a or m_b is a list of lists, but one or more of the inner lists contains None as an element.
+    >>> mul([[1, None], [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_a should contain only integers or floats
+
+    >>> mul([[1, 2], [3, 4]], [[1, None], [3, 4]])
+    Traceback (most recent call last):
+            ...
+    TypeError: m_b should contain only integers or floats
