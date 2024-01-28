@@ -27,7 +27,7 @@ def matrix_mul(m_a, m_b):
             else:
                 for num in row:
                     if (isinstance(num, bool) or
-                        not isinstance(num, (int, float))):
+                            not isinstance(num, (int, float))):
                         raise TypeError(message3)
         for row in m_b:
             if not isinstance(row, list):
@@ -39,7 +39,7 @@ def matrix_mul(m_a, m_b):
             else:
                 for num in row:
                     if (isinstance(num, bool) or
-                        not isinstance(num, (int, float))):
+                            not isinstance(num, (int, float))):
                         raise TypeError(message4)
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
