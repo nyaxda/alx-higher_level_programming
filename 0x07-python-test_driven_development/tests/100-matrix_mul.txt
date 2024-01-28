@@ -1,7 +1,7 @@
 Multiplies 2 matrices
 
 Testing import:
-    >>> mul = __import__('100-matrix_mul.py').matrix_mul
+    >>> mul = __import__('100-matrix_mul').matrix_mul
 
 Case 1: Normal Case:
     >>> mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
