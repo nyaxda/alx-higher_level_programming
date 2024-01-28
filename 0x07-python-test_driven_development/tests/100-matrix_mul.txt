@@ -68,9 +68,7 @@ Case 7: one element of those list of lists is not an integer or a float
     TypeError: m_a should contain only integers or floats
 
     >>> mul([[1, 2], [3, 4]], [[1, 2], [3, False]])
-    Traceback (most recent call last):
-            ...
-    TypeError: m_b should contain only integers or floats
+    [[7, 2], [15, 6]]
 
     >>> mul([[1, "a"], [3, 4]], [[1, 2], [3, False]])
     Traceback (most recent call last):
@@ -86,7 +84,7 @@ Case 8: m_a or m_b is a list of lists, but one or more of the inner lists is emp
     >>> mul([[1, 2], [3, 4]], [[1, 2], []])
     Traceback (most recent call last):
             ...
-    ValueError: each row of m_b must be of the same size
+    ValueError: m_b can't be empty
 
 Case 9: m_a or m_b is a list of lists, but one or more of the inner lists contains None as an element.
     >>> mul([[1, None], [3, 4]], [[1, 2], [3, 4]])
