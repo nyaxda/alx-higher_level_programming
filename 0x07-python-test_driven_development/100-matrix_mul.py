@@ -4,6 +4,8 @@
 
 def matrix_mul(m_a, m_b):
     """Multiply two matrices."""
+    message1 = "each row of m_a must be of the same size"
+    message2 = "each row of m_b must be of the same size"
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
     elif not isinstance(m_b, list):
@@ -19,7 +21,7 @@ def matrix_mul(m_a, m_b):
             elif len(row) == 0:
                 raise ValueError("m_a can't be empty")
             elif len(row) != len(m_a[0]):
-                raise TypeError("each row of m_a must be of the same size")
+                raise TypeError(message1)
             else:
                 for num in row:
                     if isinstance(num, bool) or not isinstance(num, (int, float)):
@@ -30,7 +32,7 @@ def matrix_mul(m_a, m_b):
                 elif len(row) == 0:
                     raise ValueError("m_b can't be empty")
                 elif len(row) != len(m_b[0]):
-                    raise TypeError("each row of m_b must be of the same size")
+                    raise TypeError(message2)
                 else:
                     for num in row:
                         if isinstance(num, bool) or not isinstance(num, (int, float)):
