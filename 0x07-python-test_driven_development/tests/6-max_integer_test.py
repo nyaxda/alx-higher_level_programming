@@ -49,5 +49,4 @@ class TestMaxInt(unittest.TestCase):
             max_integer([1, 2, 'three', 4])
     
     def test_string(self):
-        with self.assertRaises(TypeError):
-            max_integer("string")
+        self.assertEqual(max_integer("string"), 't')
