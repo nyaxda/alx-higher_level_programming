@@ -81,7 +81,7 @@ Case 8: m_a or m_b is a list of lists, but one or more of the inner lists is emp
     >>> mul([[1, 2], []], [[1, 2], [3, 4]])
     Traceback (most recent call last):
             ...
-    ValueError: each row of m_a must be of the same size
+    ValueError: m_a can't be empty
 
     >>> mul([[1, 2], [3, 4]], [[1, 2], []])
     Traceback (most recent call last):
