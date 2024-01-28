@@ -22,19 +22,19 @@ def matrix_mul(m_a, m_b):
                 for num in row:
                     if isinstance(num, bool) or not isinstance(num, (int, float)):
                         raise TypeError("m_a should contain only integers or floats")
-
         for row in m_b:
                 if not isinstance(row, list):
                     raise TypeError("m_b must be a list of lists")
                 elif len(row) == 0:
                     raise ValueError("m_b can't be empty")
-                elif len(row) != len(m_a[0]):
-                    raise TypeError("m_a and m_b can't be multiplied")
+                elif len(row) != len_row_b:
+                    raise TypeError("each row of m_b must be of the same size")
                 else:
                     for num in row:
                         if isinstance(num, bool) or not isinstance(num, (int, float)):
                             raise TypeError("m_b should contain only integers or floats")
-
+    if len(m_a[0]) != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
     result = []
     for i in range(len(m_a)):
         result_row = []
