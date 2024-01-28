@@ -18,6 +18,8 @@ def matrix_mul(m_a, m_b):
                 raise TypeError("m_a must be a list of lists")
             elif len(row) == 0:
                 raise ValueError("m_a can't be empty")
+            elif len(row) != len(m_a[0]):
+                raise TypeError("each row of m_a must be of the same size")
             else:
                 for num in row:
                     if isinstance(num, bool) or not isinstance(num, (int, float)):
