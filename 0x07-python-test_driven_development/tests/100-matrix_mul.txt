@@ -30,7 +30,7 @@ Case 5: Matrices are not is not list(s):
             ...
     TypeError: m_a must be a list
 
-    >>> mul([[1, 2], [3, 4]], 2)
+    >>> mul([[1, 2], [3, 4]], False)
     Traceback (most recent call last):
             ...
     TypeError: m_b must be a list
@@ -68,7 +68,9 @@ Case 7: one element of those list of lists is not an integer or a float
     TypeError: m_a should contain only integers or floats
 
     >>> mul([[1, 2], [3, 4]], [[1, 2], [3, False]])
-    [[7, 2], [15, 6]]
+    Traceback (most recent call last):
+            ...
+    TypeError: m_b should contain only integers or floats
 
     >>> mul([[1, "a"], [3, 4]], [[1, 2], [3, False]])
     Traceback (most recent call last):
