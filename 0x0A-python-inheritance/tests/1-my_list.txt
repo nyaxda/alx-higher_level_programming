@@ -8,33 +8,48 @@ Normal Case:
     >>> my_list = listing([10, 8, 7, 9, 3])
     >>> my_list.print_sorted()
     [3, 7, 8, 9, 10]
+    >>>
 
 Empty List:
     >>> my_list = listing([])
     >>> my_list.print_sorted()
     []
+    >>>
 
 List with duplicate elements:
     >>> my_list = listing([5, 5, 5])
     >>> my_list.print_sorted()
     [5, 5, 5]
+    >>>
 
 List with negative numbers:
     >>> my_list = listing([5, -1, -3, 2])
     >>> my_list.print_sorted()
     [-3, -1, 2, 5]
+    >>>
 
 List with one element:
     >>> my_list = listing([5])
     >>> my_list.print_sorted()
     [5]
+    >>>
 
 List with zero:
     >>> my_list = listing([5, 0, -3, 2])
     >>> my_list.print_sorted()
     [-3, 0, 2, 5]
+    >>>
 
 List with mixed positive and negative duplicates:
     >>> my_list = listing([5, -5, 5, -5])
     >>> my_list.print_sorted()
     [-5, -5, 5, 5]
+    >>>
+
+Not defined an instance of the class:
+    >>> MyList = __import__('1_my_list').MyList
+    >>> mylist2.print_sorted()
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    NameError: name 'my_list2' is not defined
+    >>>
