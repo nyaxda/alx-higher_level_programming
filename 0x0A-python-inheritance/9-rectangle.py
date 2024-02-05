@@ -14,7 +14,7 @@ class Rectangle(BaseGeometry):
     
     Methods:
     __init__(self, width, height): instantiation with width and height
-    area(self, width, height): returns the area of the rectangle
+    area(self): returns the area of the rectangle
     __str__(self): returns a string representation of the rectangle
     """
 
@@ -37,4 +37,4 @@ class Rectangle(BaseGeometry):
         """
         returns a string representation of the rectangle
         """
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)\
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
