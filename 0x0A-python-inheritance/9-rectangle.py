@@ -22,16 +22,16 @@ class Rectangle(BaseGeometry):
         """
         instantiation with width and height
         """
-        self.integer_validator("width", width)
+        super().integer_validator("width", width)
         self.__width = width
-        self.integer_validator("height", height)
+        super().integer_validator("height", height)
         self.__height = height
 
-    def area(width, height)
+    def area(self):
         """
         returns the area of the rectangle
         """
-        return width * height
+        return self.__width * self.__height
     
     def __str__(self):
         """
