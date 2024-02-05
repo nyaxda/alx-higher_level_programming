@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ This module contains a class Rectangle that inherits from BaseGeometry"""
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """
     it inherits from BaseGeometry
 
@@ -21,7 +21,7 @@ class Square(BaseGeometry):
         """
         instantiation with width and height
         """
-        super().integer_validator("width", size)
+        super().integer_validator("size", size)
         self.__size = size
 
     def area(self):
