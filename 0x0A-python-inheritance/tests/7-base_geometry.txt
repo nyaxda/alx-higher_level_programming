@@ -1,5 +1,8 @@
 Testing the BaseGeometry class:
 
+Testing importL
+    >>> geometry = __import__('7-base_geometry').BaseGeometry
+
 Area method not implemented:
     >>> geometry = BaseGeometry()
     >>> geometry.area()
@@ -31,3 +34,24 @@ Integer Validator - Invalid Value (less than or equal to 0):
     Traceback (most recent call last):
             ...
     ValueError: radius must be greater than 0
+
+Integer Validator - Handling boolean values:
+    >>> geometry = BaseGeometry()
+    >>> geometry.integer_validator("is_valid", True)
+    Traceback (most recent call last):
+            ...
+    TypeError: is_valid must be an integer
+
+Integer Validator - Handling negative values:
+    >>> geometry = BaseGeometry()
+    >>> geometry.integer_validator("temperature", -5)
+    Traceback (most recent call last):
+            ...
+    ValueError: temperature must be greater than 0
+
+Integer Validator - Handling None:
+    >>> geometry = BaseGeometry()
+    >>> geometry.integer_validator("count", None)
+    Traceback (most recent call last):
+            ...
+    TypeError: count must be an integer
