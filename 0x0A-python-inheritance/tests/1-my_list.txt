@@ -5,6 +5,6 @@ Testing Importing:
     >>> listing = __import__('1-my_list').MyList
 
 Normal Case:
-    >>> my_list = MyList([10, 8, 7, 9, 3])
+    >>> my_list = listing([10, 8, 7, 9, 3])
     >>> my_list.print_sorted()
     [3, 7, 8, 9, 10]
