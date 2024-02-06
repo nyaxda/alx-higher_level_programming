@@ -10,8 +10,8 @@ if __name__ == '__main__':
     filename = "add_item.json"
 
     try:
-        items = loadjsonfile("add_item.json")
+        items = loadjsonfile(filename)
     except FileNotFoundError:
         items = []
     items.extend(sys.argv[1:])
-    savejsonfile(items, "add_item.json")
+    savejsonfile(items, filename)
