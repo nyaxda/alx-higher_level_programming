@@ -3,8 +3,9 @@
 and then save them to a file"""
 import sys
 
-savejsonfile = __import__('5-save_to_json_file').save_to_json_file
-loadjsonfile = __import__('6-load_from_json_file').load_from_json_file
+if __name__ == '__main__':
+    savejsonfile = __import__('5-save_to_json_file').save_to_json_file
+    loadjsonfile = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
