@@ -12,6 +12,6 @@ filename = "add_item.json"
 if not os.path.isfile(filename):
     savejsonfile([], filename)
 
-items = load_from_json_file(filename)
+items = loadjsonfile(filename)
 items.extend(sys.argv[1:])
-loadjsonfile(items, filename)
+savejsonfile(items, filename)
