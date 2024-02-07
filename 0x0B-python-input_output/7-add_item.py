@@ -10,7 +10,7 @@ if path.exists('add_item.json'):
     items = load_from_json_file('add_item.json')
 else:
     items = []
-for i in range(1, len(sys.argv))
+for i in range(1, len(sys.argv)):
     items.append(sys.argv[i])
 save_to_json_file(items, 'add_item.json')
     
