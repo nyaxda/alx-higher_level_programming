@@ -44,7 +44,7 @@ class Rectangle(Base):
         """x setter method."""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        elif x < 0:
+        elif x=value < 0:
             raise ValueError("x must be >= 0")
         else:
             self.__x = value
@@ -59,7 +59,7 @@ class Rectangle(Base):
         """y setter method."""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        elif y < 0:
+        elif value < 0:
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
