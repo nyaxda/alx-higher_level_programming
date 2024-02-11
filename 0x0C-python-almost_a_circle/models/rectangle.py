@@ -4,6 +4,13 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """Represents a rectangle.
+        Private instance attributes:
+            width: The width of the rectangle.
+            height: The height of the rectangle.
+            x: The x coordinate of the rectangle.
+            y: The y coordinate of the rectangle.
+    """
     @property
     def width(self):
         """Gets the width of the rectangle."""
@@ -97,3 +104,14 @@ class Rectangle(Base):
             for k, v in kwargs.items():
                 if k in attributes:
                     setattr(self, k, v)
+
+
+class Square(Rectangle):
+    """Represents a square."""
+    def __init__(self, size, x=0, y=0, id=None):
+        """Initializes a new square."""
+        super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        """String representation of the square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
