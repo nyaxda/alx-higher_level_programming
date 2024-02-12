@@ -223,7 +223,6 @@ class TestRectangle(unittest.TestCase):
         self.assertIsInstance(list_input, list)
         self.assertIsInstance(list_output, list)
         self.assertEqual(list_input, list_output)
-        self.assertNotEqual(list_input, list_output)
         self.assertNotEqual(list_input[0], list_output[0])
         self.assertNotEqual(list_input[1], list_output[1])
 
