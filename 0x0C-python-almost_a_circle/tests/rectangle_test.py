@@ -4,6 +4,7 @@ import sys
 from io import StringIO
 from models.rectangle import Rectangle
 from models.base import Base
+import json
 
 
 class TestRectangle(unittest.TestCase):
