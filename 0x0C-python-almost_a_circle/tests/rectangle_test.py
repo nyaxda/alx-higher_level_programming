@@ -154,7 +154,7 @@ class TestRectangle(unittest.TestCase):
         self.assertNotEqual(r2, r1)
 
         """resetting"""
-        Base.reset_nb_object()
+        Base.reset_nb_objects()
 
     def test_dict_to_json(self):
         r1 = Rectangle(10, 7, 2, 8)
