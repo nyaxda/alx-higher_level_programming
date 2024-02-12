@@ -179,7 +179,7 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(2, 4)
         Rectangle.save_to_file([r1, r2])
         expected_output = [{
-            "y": 8, 
+            "y": 8,
             "x": 2,
             "id": 1,
             "width": 10,
@@ -199,9 +199,8 @@ class TestRectangle(unittest.TestCase):
 
     def test_from_json_string(self):
         list_input = [
-        {'id': 89, 'width': 10, 'height': 4},
-        {'id': 7, 'width': 1, 'height': 7}
-    ]
+            {'id': 89, 'width': 10, 'height': 4},
+            {'id': 7, 'width': 1, 'height': 7}]
         json_list_input = Rectangle.to_json_string(list_input)
         list_output = Rectangle.from_json_string(json_list_input)
 
