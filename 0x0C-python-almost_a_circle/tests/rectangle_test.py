@@ -165,6 +165,7 @@ class TestRectangle(unittest.TestCase):
             'id': 1, 'height': 7, 'y': 8
             }
 
+        expected_dict = [{'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}]
         self.assertIsInstance(dictionary, dict)
         self.assertIsInstance(json_dictionary, str)
         self.assertEqual(dictionary, expected_rect_dictionary)
