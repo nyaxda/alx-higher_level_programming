@@ -7,7 +7,7 @@ from models.base import Base
 class TestBase(unittest.TestCase):
     """test for Base class"""
 
-    def test_instances(self)
+    def test_instances(self):
         """testing for instances"""
         b1 = Base()
         b2 = Base()
