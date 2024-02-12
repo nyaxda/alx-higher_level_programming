@@ -39,24 +39,14 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """updates attributes"""
-        if args and len(args) > 0:
-            try:
-                self.id = args[0]
-                self.size = args[1]
-                self.x = args[2]
-                self.y = args[3]
-            except IndexError:
-                pass
+        attributes = ["id", "size", "x", "y"]
+        if args:
+            for attr, value in zip(attributes, args):
+                setattr(self, attr, value)
         else:
-            if 'id' in kwargs:
-                self.id = kwargs['id']
-            if 'size' in kwargs:
-                self.id = kwargs['size']
-            if 'x' in kwargs:
-                self.id = kwargs['x']
-            if 'y' in kwargs:
-                self.id = kwargs['y']
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns the dictionary represenetation of a Square"""
-        return{"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+        return{"id" : self.id, "x" : self.x, "size" : self.size, "y" : self.y}
