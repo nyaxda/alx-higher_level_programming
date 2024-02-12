@@ -13,7 +13,7 @@ class TestRectangle(unittest.TestCase):
         """normal test cases"""
         r1 = Rectangle(6, 10)
         r2 = Rectangle(5, 10, 3)
-        r3 = Rectangle (5, 10, 3, 4)
+        r3 = Rectangle(5, 10, 3, 4)
 
         self.assertEqual(r1.area(), 60)
         self.assertEqual(r2.x, 3)
@@ -77,7 +77,7 @@ class TestRectangle(unittest.TestCase):
             r3.display()
             output = sys.stdout.getvalue()
             # testing output
-            self.assertEqual(output, ' ##\n' *2)
+            self.assertEqual(output, ' ##\n' * 2)
 
             sys.stdout.seek(0)
             sys.stdout.truncate(0)
@@ -118,7 +118,7 @@ class TestRectangle(unittest.TestCase):
             r1.update(89, 2, 3, 4)
             self.assertEqual(str(r1), "[Rectangle] (89) 4/10 - 2/3")
             r1.update(89, 2, 3, 4, 5)
-            self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/3" )
+            self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/3")
 
             """resetting"""
             Base.reset_nb_objects()
@@ -178,7 +178,16 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
         Rectangle.save_to_file([r1, r2])
-        expected_output = [{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}, {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]
+        expected_output = [{"y": 8, "x": 2,
+                            "id": 1,
+                            "width": 10,
+                            "height": 7},
+                            {
+                                "y": 0,
+                                "x": 0,
+                                "id": 2,
+                                "width": 2,
+                                "height": 4}]
         with open("Rectangle.json", "r") as file:
             content = json.load(file)
             self.assertEqual(content, expected_output)
