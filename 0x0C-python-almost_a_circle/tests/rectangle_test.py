@@ -159,17 +159,16 @@ class TestRectangle(unittest.TestCase):
     def test_dict_to_json(self):
         r1 = Rectangle(10, 7, 2, 8)
         dictionary = r1.to_dictionary()
-        json_dictionary = Base.to_json_string([dictionary])
+        json_dictionary = Rectangle.to_json_string([dictionary])
         expected_rect_dictionary = {
             'x': 2, 'width': 10,
             'id': 1, 'height': 7, 'y': 8
             }
-        expected_json = "[{'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}]"
 
         self.assertIsInstance(dictionary, dict)
         self.assertIsInstance(json_dictionary, str)
         self.assertEqual(dictionary, expected_rect_dictionary)
-        self.assertEqual(json_dictionary, expected_json)
+        self.assertEqual(json.loads(json_dictionary), expected_dict)
 
         """resetting"""
         Base.reset_nb_objects()
