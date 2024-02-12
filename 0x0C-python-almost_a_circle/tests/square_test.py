@@ -71,7 +71,7 @@ class TestSquare(unittest.TestCase):
             sys.stdout.seek(0)
             sys.stdout.truncate(0)
 
-            s2.display()
+            s3.display()
             output = sys.stdout.getvalue()
             self.assertEqual(output, '\n' +  '  ##\n' * 2)
             sys.stdout.seek(0)
