@@ -59,11 +59,11 @@ class TestRectangle(unittest.TestCase):
         original_output = sys.stdout
 
         try:
-            #stdout to StringIO object
+            # stdout to StringIO object
             sys.stdout = StringIO()
             r1.display()
             output = sys.stdout.getvalue()
-            #testing output
+            # testing output
             self.assertEqual(output, '####\n' * 6)
             sys.stdout.seek(0)
             sys.stdout.truncate(0)
@@ -76,18 +76,18 @@ class TestRectangle(unittest.TestCase):
 
             r3.display()
             output = sys.stdout.getvalue()
-            #testing output
+            # testing output
             self.assertEqual(output, ' ##\n' *2)
 
             sys.stdout.seek(0)
             sys.stdout.truncate(0)
             r4.display()
             output = sys.stdout.getvalue()
-            #testing output
+            # testing output
             self.assertEqual(output, '\n' * 5 + ' ###\n' * 3)
 
         finally:
-            #restoring stdout to original value
+            # restoring stdout to original value
             sys.stdout = original_output
 
         """resetting"""

@@ -4,6 +4,7 @@ import json
 
 """Defines a rectangle class."""
 
+
 class Rectangle(Base):
     """Represents a rectangle.
         Private instance attributes:

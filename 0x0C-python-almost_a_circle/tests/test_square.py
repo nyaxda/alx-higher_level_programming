@@ -55,18 +55,18 @@ class TestSquare(unittest.TestCase):
         original_output = sys.stdout
 
         try:
-            #stdout to StringIO object
+            # stdout to StringIO object
             sys.stdout = StringIO()
             s1.display()
             output = sys.stdout.getvalue()
-            #testing output
+            # testing output
             self.assertEqual(output, '####\n' * 4)
             sys.stdout.seek(0)
             sys.stdout.truncate(0)
 
             s2.display()
             output = sys.stdout.getvalue()
-            #testing output
+            # testing output
             self.assertEqual(output, '  ##\n' * 2)
             sys.stdout.seek(0)
             sys.stdout.truncate(0)
@@ -78,7 +78,7 @@ class TestSquare(unittest.TestCase):
             sys.stdout.truncate(0)
 
         finally:
-            #restoring stdout to original value
+            # restoring stdout to original value
             sys.stdout = original_output
 
         """resetting"""
