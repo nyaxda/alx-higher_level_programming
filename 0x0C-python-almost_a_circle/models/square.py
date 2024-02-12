@@ -34,23 +34,28 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """size setter method."""
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        elif value <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.width = value
-            self.height = value
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """updates attributes"""
-        attributes = ["id", "size", "x", "y"]
-        if args:
-            for attr, value in zip(attributes, args):
-                setattr(self, attr, value)
+        if args and len(args) > 0:
+            try:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except IndexError:
+                pass
         else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'size' in kwargs:
+                self.id = kwargs['size']
+            if 'x' in kwargs:
+                self.id = kwargs['x']
+            if 'y' in kwargs:
+                self.id = kwargs['y']
 
     def to_dictionary(self):
         """Returns the dictionary represenetation of a Square"""
