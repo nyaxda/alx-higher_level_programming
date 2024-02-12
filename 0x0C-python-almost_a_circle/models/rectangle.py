@@ -1,8 +1,7 @@
 #!/usr/bin/python3
+"""Defines a rectangle class."""
 from models.base import Base
 import json
-
-"""Defines a rectangle class."""
 
 
 class Rectangle(Base):
