@@ -163,7 +163,7 @@ class TestRectangle(unittest.TestCase):
             'x': 2, 'width': 10,
             'id': 1, 'height': 7, 'y': 8
             }
-        expected_json = '[{'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}]'
+        expected_json = "[{'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}]"
 
         self.assertIsInstance(dictionary, dict)
         self.assertIsInstance(json_dictionary, str)
