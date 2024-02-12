@@ -73,7 +73,7 @@ class TestSquare(unittest.TestCase):
 
             s3.display()
             output = sys.stdout.getvalue()
-            self.assertEqual(output, '\n' +  '  ##\n' * 2)
+            self.assertEqual(output, '\n' + '  ##\n' * 2)
             sys.stdout.seek(0)
             sys.stdout.truncate(0)
 
