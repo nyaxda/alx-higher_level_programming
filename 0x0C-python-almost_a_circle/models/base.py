@@ -2,6 +2,7 @@
 """Defines a base class for all models in the project."""
 import json
 
+
 class Base:
     """Represents the BaseModel class."""
     __nb_objects = 0
@@ -12,6 +13,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
     @classmethod
     def reset_nb_objects(cls):
         cls.__nb_objects = 0
@@ -59,5 +61,5 @@ class Base:
             with open(filename, "r") as file:
                 list_dicts = cls.from_json_string(file.read())
                 return [cls.create(**d) for d in list_dicts]
-        except:
+        except FileNotFoundError:
             return []
