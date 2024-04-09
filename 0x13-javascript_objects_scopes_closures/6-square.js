@@ -2,11 +2,11 @@
 /**
  * square Class
  */
-const Square = require('./5-square');
+const SquareParent = require('./5-square');
 
-class Square extends Rectangle {
+class Square extends SquareParent {
   constructor (size) {
-    super(size, size);
+    super(size);
   }
 
   charPrint (c) {
