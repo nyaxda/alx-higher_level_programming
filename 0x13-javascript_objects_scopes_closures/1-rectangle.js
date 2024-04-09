@@ -5,9 +5,9 @@
 class Rectangle {
   width;
   height;
-  constructor (width, height) {
-    this.w = width;
-    this.h = height;
+  constructor (w, h) {
+    this.width = w;
+    this.height = h;
   }
 }
 
