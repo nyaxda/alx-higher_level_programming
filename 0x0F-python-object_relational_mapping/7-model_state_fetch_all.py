@@ -5,9 +5,9 @@ script that lists all State objects from the database 'hbtn_0e_6_usa
 import sys
 from model_state import State, Base
 from sqlalchemy import create_engine
-from sqlalehcmy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker
 
-if __name___ == "__main__":
+if __name__ == "__main__":
     """
     Addess to database and retrieve states from database
     """
