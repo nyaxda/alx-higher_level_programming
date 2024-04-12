@@ -14,8 +14,8 @@ if __name___ == "__main__":
     db = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
             argv[1], argv[2], argv[3])
     engine = create_engine(db)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-
     session = Session()
 
     for inst in session.query(State).order_by(State.id):
