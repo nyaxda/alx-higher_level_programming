@@ -12,7 +12,7 @@ if __name___ == "__main__":
     Addess to database and retrieve states from database
     """
     db = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
-            argv[1], argv[2], argv[3])
+            sys.argv[1], sys.argv[2], sys.argv[3])
     engine = create_engine(db)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
