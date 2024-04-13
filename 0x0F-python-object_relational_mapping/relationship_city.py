@@ -3,7 +3,7 @@
 City link class to table in database
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
-from relatioship_state import Base
+from relationship_state import Base
 
 
 class City(Base):
