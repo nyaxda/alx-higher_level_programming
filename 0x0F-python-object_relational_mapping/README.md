@@ -94,8 +94,8 @@ What you should learn from this project:
 -   Results are sorted by ascending  `cities.id`.
 
 ### [15. City relationship](https://github.com/nyaxda/alx-higher_level_programming/blob/main/0x0F-python-object_relational_mapping/100-relationship_states_cities.py)
--   [relationship_state.py](https://github.com/Lordwill1/alx-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/relationship_state.py): Python module defining a class  `State`  that inherits from SQLAlchemy  `Base`  and links to the MySQL table  `states`.
-    -   Identical to the  `State`  class defined in  [model_state.py](https://github.com/Lordwill1/alx-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/model_state.py).
+-   relationship_state.py: Python module defining a class  `State`  that inherits from SQLAlchemy  `Base`  and links to the MySQL table  `states`.
+    -   Identical to the  `State`  class defined in  model_state.py
     -   Includes class attribute  `classes`  that represents a relationship with the class  `City`. If the  `State`  object is deleted, all linked  `City`  objects are also deleted.  `State`  objects are backreferenced to  `City`  objects as  `state`.
 -   relationship_city.py: Python module defining a class  `City`  that inherits from SQLAlchemy  `Base`  and links to the MySQL table  `cities`.
  -   Identical to the  `City`  class defined in  model_city.py
